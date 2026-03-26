@@ -1,0 +1,19 @@
+    {
+    "manifest_version": 3,
+    "name": "YouTube Study Mode",
+    "version": "1.0",
+    "description": "Distraction-free YouTube for students",
+    "permissions": ["storage", "activeTab", "scripting"],
+    "host_permissions": ["https://www.youtube.com/*"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Study Mode"
+    },
+    "content_scripts": [
+        {
+        "matches": ["https://www.youtube.com/*"],
+        "js": ["content.js"],
+        "css": ["styles.css"]
+        }
+    ]
+    }
